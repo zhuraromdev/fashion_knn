@@ -93,6 +93,15 @@ Ensemble encoding offers the following benefits:
 - Enhanced Robustness: Ensemble encoding leverages multiple models to capture different aspects of the image, resulting in more diverse and robust image representations.
 - Improved Retrieval: The diversified embeddings obtained from ensemble encoding can lead to improved similarity measurements and better retrieval results.
 
+# Results
+
+Original model
+![Original model](result/Figure_1.png)
+
+Augmentation model
+![Augmentation model](result/Figure_2.png)
+
+
 # Future Improvements
 
 The current version of the image retrieval system provides a solid foundation for similarity-based image retrieval. However, there are several avenues for further enhancement and development. Here are some ideas for future improvements:
