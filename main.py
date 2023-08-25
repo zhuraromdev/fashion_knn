@@ -37,22 +37,12 @@ class ImageRetrievalSystem:
         with open(self.embeddings_file, 'wb') as f:
             pickle.dump(index_encodings, f)
 
-    # def process_image(self, img_path):
-    #     img = Image.open(img_path)
-    #     img = img.resize((224, 224))
-    #     img_array = image.img_to_array(img)
-    #     img_array = img_array[..., ::-1]
-    #     img_array = np.expand_dims(img_array, axis=0)
-    #     return img_array
     def process_image(self, img_path):
         img = Image.open(img_path)
         img = img.resize((224, 224))
         img_array = image.img_to_array(img)
-        print("Image array shape before preprocessing:", img_array.shape)  # Debugging
         img_array = img_array[..., ::-1]  # Ensure correct channel order
-        print("Image array shape after channel ordering:", img_array.shape)  # Debugging
         img_array = np.expand_dims(img_array, axis=0)
-        print("Image array shape after expanding dimensions:", img_array.shape)  # Debugging
         return img_array
 
     def load_index_images(self):
