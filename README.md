@@ -26,23 +26,23 @@ This code implements an image retrieval system using a k-Nearest Neighbors (k-NN
 ### ImageRetrievalSystem
 This class manages the image retrieval process using a non-augmented dataset.
 
-- encode_image(img_array): Encodes an image array using the ResNet50 model.
-- load_index_images(): Loads index images, processes them, and encodes them.
-- get_index_encodings(): Returns index image encodings, loading or generating them as needed.
-- visualize_neighbors(input_image_path, neighbor_file_names, index_dir): Displays the input image and its neighbors.
-- main(query_image, top_n): Main retrieval process.
+- `encode_image(img_array)`: Encodes an image array using the ResNet50 model.
+- `load_index_images()`: Loads index images, processes them, and encodes them.
+- `get_index_encodings()`: Returns index image encodings, loading or generating them as needed.
+- `visualize_neighbors(input_image_path, neighbor_file_names, index_dir)`: Displays the input image and its neighbors.
+- `main(query_image, top_n)`: Main retrieval process.
 
 ### AugmentedImageRetrievalSystem
 
 This class extends ImageRetrievalSystem to support data augmentation for improving retrieval.
-- augment_and_expand_dataset(index_images, augmentation_factor): Augments index images and expands the dataset.
-- augment_image(image): Applies data augmentation transformations (placeholder).
-- main(query_image, top_n, augmentation_factor): Main retrieval process with augmentation.
+- `augment_and_expand_dataset(index_images, augmentation_factor)`: Augments index images and expands the dataset.
+- `augment_image(image)`: Applies data augmentation transformations (placeholder).
+- `main(query_image, top_n, augmentation_factor)`: Main retrieval process with augmentation.
 
 ### PerformanceTester
 This class calculates retrieval system performance metrics.
 
-- calculate_metrics(query_image, top_n): Calculates mean similarity, accuracy, precision, and recall.
+- `calculate_metrics(query_image, top_n)`: Calculates mean similarity, accuracy, precision, and recall.
 
 ## Example
 To retrieve similar images for a query image named example.jpg and display the top 3 similar images:
